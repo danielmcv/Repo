@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="ui clearing red inverted segment">
+  <div class="ui right floated inverted secondary menu">
+    <div class="ui red button">
+      <i class="large compass icon"></i>Descubre
+    </div>
+    <div class="ui red button">
+      <i class="large alarm icon"></i>Notificacion
+    </div>
+    <div class="ui red button">
+      <i class="large user icon"></i>Perfil
+    </div>
+  </div>
+</div>
+<button class="ui big primary button" id="modal_publication">
+  Publicar
+</button>
+
+<div class="ui two column centered grid">
+<div class="column">
+<div class="ui card fluid">
+  <div class="content">
+    <div class="right floated meta"></div>
+    <img class="ui avatar huge image" src="">
+  </div>
+  	<div class="ui fuid image">
+  		<div class="ui big green right ribbon label"></div>
+      <img src="">
+    </div>
+  <div class="content">
+  	<div class="small ui labeled button" tabindex="0">
+  		<div class="small ui red button">
+    		<i class=""></i> Linq
+  		</div>
+  		<a class="small ui basic red left pointing label">
+  		</a>
+	</div>
+		<button class="small ui green button">comprar</button>
+  </div>
+  <div class="ui container content"></div>
+  <div class="extra content">
+    <div class="ui large transparent left icon input">
+      <i class="comment outline icon"></i>
+      <input type="text" placeholder="Add Comment...">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="ui basic modal" id="post_modal">
+  <div class="ui icon header">
+    <i class="archive icon"></i>
+    Archive Old Messages
+  </div>
+  <div class="content">
+    <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+  </div>
+  <div class="actions">
+    <div class="ui red basic cancel inverted button">
+      <i class="remove icon"></i>
+      No
+    </div>
+    <div class="ui green ok inverted button">
+      <i class="checkmark icon"></i>
+      Yes
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block jsfiles %}
+  <script type="text/javascript" src=" {% static 'js/functions.js' %}" ></script>
+{% endblock %}
+
+{% block ready %}
+{% endblock %}

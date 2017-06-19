@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset ="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Linq</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'semantic/out/semantic.css' %}" />
+</head>
+<body>
+{% block content %}
+
+{% endblock %}	
+<script type="text/javascript" src=" {% static 'semantic/out/jquery.min.js' %}" ></script>
+<script type="text/javascript" src=" {% static 'semantic/out/semantic.min.js' %}" ></script>
+{% block jsfiles %}
+
+{% endblock %}
+<script>
+    $('.ui.dropdown').dropdown();
+    $(document).ready(function(){
+     $('.ui.massive.blue.button').click(function(){
+        $('.ui.basic.modal').modal('show');    
+     });
+     {% block ready%}
+     {% endblock %}
+});
+</script>
+</body>
+</html>
